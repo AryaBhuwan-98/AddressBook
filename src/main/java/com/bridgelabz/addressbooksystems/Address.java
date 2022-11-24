@@ -3,6 +3,7 @@ package com.bridgelabz.addressbooksystems;
 public class Address {
 	private String city, state;
     private long zip;
+    
 
     public String getCity() {
         return city;
