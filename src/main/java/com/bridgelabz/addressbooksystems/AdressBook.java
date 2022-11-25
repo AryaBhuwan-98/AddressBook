@@ -3,6 +3,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Scanner;
 public class AdressBook {
+	private static final ArrayList<CreateContact> CreatecontactList = null;
 	Scanner scannerObject = new Scanner(System.in);
 	ArrayList<CreateContact> contactList = new ArrayList<CreateContact>();
 	
@@ -14,7 +15,7 @@ public class AdressBook {
         do{
 
             System.out.println("\nChoose the operation you want to perform");
-            System.out.println("1.Add To Address Book\n2.Edit Existing Entry\n3.Display Address book\n4.Exit Address book System");
+            System.out.println("1.Add To Address Book\n2.Edit Existing Entry\n3.Display Address book\n4.Delete Contact\n5.Exit Address book System");
 
             switch (scannerObject.nextInt()) {
                 case 1:
@@ -27,6 +28,9 @@ public class AdressBook {
                     displayContents();
                     break;
                 case 4:
+                    deletePerson();
+                    break;
+                case 5:
                     moreChanges = false;
                     System.out.println("BYE !");
 
@@ -35,7 +39,9 @@ public class AdressBook {
 
         }while(moreChanges);
     }
+
     public void addContact() {
+
         CreateContact person = new CreateContact();
         Address address = new Address();
 
@@ -74,6 +80,7 @@ public class AdressBook {
         contactList.add(person);
 
     }
+
     public void editPerson() {
 
         System.out.println("Enter the first name:");
@@ -128,12 +135,26 @@ public class AdressBook {
         }
 
     }
+    public void deletePerson() {
+
+        System.out.println("Enter the first name of the person to be deleted");
+        String firstName = scannerObject.next();
+        Iterator<CreateContact> iterator = CreateContact.listIterator();
+        while(iterator.hasNext()) {
+
+            CreateContact person = iterator.next();
+
+            if(firstName.equals(person.getFirstName())) {
+                CreateContact.remove(person);
+                return;
+            }
+        }
+    }
     public void displayContents() {
 
-        Iterator<CreateContact> iterator = contactList.iterator();
+        Iterator<CreateContact> iterator = CreateContact.iterator()
         while(iterator.hasNext()) {
             System.out.println(iterator.next());
         }
-
     }
 }
