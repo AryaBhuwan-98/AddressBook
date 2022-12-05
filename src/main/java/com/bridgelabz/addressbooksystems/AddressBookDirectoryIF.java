@@ -6,4 +6,3 @@ public interface AddressBookDirectoryIF {
     public void displayDirectoryContents();
     public void editAddressBook();  
 }
-
