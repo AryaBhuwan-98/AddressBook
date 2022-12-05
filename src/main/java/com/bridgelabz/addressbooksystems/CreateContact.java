@@ -1,18 +1,16 @@
 package com.bridgelabz.addressbooksystems;
 
 public class CreateContact {
-
-	private String firstName, lastName, email;
+    private String firstName, lastName, email;
     private long phoneNumber;
     private Address address;
-    
 
     public String getFirstName() {
         return firstName;
     }
 
     public String getLastName() {
-    	return lastName;
+        return lastName;
     }
 
     public long getPhoneNumber() {
@@ -53,4 +51,6 @@ public class CreateContact {
 
     }
 }
+	
 
+   
