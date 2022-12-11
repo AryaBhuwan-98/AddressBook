@@ -13,4 +13,3 @@ public class AddressBookDirectoryIF {
 	    public void countPeopleByRegion(HashMap<String, ArrayList<ContactPerson>> listToDisplay);
 
 	}
-}
