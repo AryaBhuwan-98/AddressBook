@@ -9,7 +9,8 @@ public class AddressBookMain {
 		
 		AddressBookDirectory addressBookDirectory = new AddressBookDirectory();
         addressBookDirectory.operationDirectory();
-        AddressBook addressBook = new AddressBook();
+        AddressBookMain addressBook = new AddressBookMain();
         addressBook.operation();
 	}
+	
 }

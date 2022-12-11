@@ -1,8 +1,11 @@
 package com.bridgelabz.addressbooksystems;
 
+import java.util.Scanner;
+
 public class Address {
 	private String city, state;
     private long zip;
+    public static Scanner scannerObject = new Scanner(System.in);
 
     public String getCity() {
         return city;
