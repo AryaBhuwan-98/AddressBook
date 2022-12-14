@@ -11,5 +11,4 @@ public class AddressBookDirectoryIF {
 	    public void searchByState();
 	    public void displayPeopleByRegion(HashMap<String, ArrayList<ContactPerson>> listToDisplay);
 	    public void countPeopleByRegion(HashMap<String, ArrayList<ContactPerson>> listToDisplay);
-
 	}
